@@ -8,7 +8,7 @@ class CookieType{
     protected:
         string cookieName;
         size_t calories;
-
+        
     public:
         CookieType(){ calories = 0;}
         CookieType(string name, size_t calorieNum){ cookieName = name; calories = calorieNum;}
