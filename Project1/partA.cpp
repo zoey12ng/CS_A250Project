@@ -2,6 +2,8 @@
 #include <set>
 #include <vector>
 
+// Maurcio Alvarez Leon
+
 using namespace std;
 
 class CookieType{
