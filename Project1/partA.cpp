@@ -50,10 +50,3 @@ class Cookie : public CookieType{
     
     ~Cookie(){}
 };
-
-int main(){
-
-
-
-    return 0;
-}

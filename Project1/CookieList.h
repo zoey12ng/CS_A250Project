@@ -10,7 +10,7 @@
 class Node
 {
 public:
-	Node() : cookie(), next(nullptr) {}
+	Node() : cookie(), next(0) {}
 	Node(const Cookie& newCookie, Node* newNext)
 		: cookie(newCookie), next(newNext) {}
 	Cookie& getCookie() { return cookie; } 
@@ -27,7 +27,7 @@ class CookieList
 {
 public:
 	// Constructors
-	CookieList() : first(nullptr), last(nullptr), count(0){}
+	CookieList() : first(0), last(0), count(0){}
 	
 	// Function addCookie
 	void addCookie(const Cookie& aCookie);
