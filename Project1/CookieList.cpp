@@ -51,8 +51,53 @@ using namespace std;
 	    last = nullptr;
 	    count = 0;
 	}
-
+// The Big Three
+	CookieList(const CookieList& otherCookieList);
+	CookieList& CookieList::operator=(const CookieList& otherCookieList)// for calling helper function	
+	{
+		if(count == 0)
+	    	copyCallingObjIsEmpty(otherCookieList); //
 		
+		
+		
+		
+		
+	}
+	CookieList::~CookieList()
+	{
+	   clearList();
+	}
+
+//helper Function
+//Function copyCallingObjIsEmpty
+    CookieList::getFirst() // umm, I'm still confused about CookieList is singly but it have 2 node, I'll fix that later. If you figure out, u can change it T.T
+    {
+        return first;
+    }
+    CookieList::getLast()
+    {
+        return last;
+    }
+void CookieList::copyCallingObjIsEmpty(const CookieList& otherCookieList)
+{
+    Node* temp = otherCookieList.getFirst();
+    while(temp != nullptr)
+    {
+        addCookie(temp->getCookie());
+        temp = temp->getNext();
+    }
+}
+
+//Function copyObjectsSameLength
+void CookieList::copyObjectsSameLength(const CookieList& otherCookieList)
+{
+    Node* temp = otherCookieList.getFirst();
+    Node* tempCalling = first;
+    while(temp!= nullptr)
+    {
+        tempCalling->setCookie(temp->getCookie());
+    }
+}
 
 
 
