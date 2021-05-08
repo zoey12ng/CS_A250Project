@@ -7,7 +7,7 @@ using namespace std;
         last->setNext(new Node(aCookie, nullptr));
         last = last->getNext();
     }
-
+	//addCookie overloaded
 	void CookieList::addCookie(const std::string& newName, size_t newCalories,
 		const std::set<std::string>& newIngredients, size_t newServings){
             Cookie(newName, newCalories, newIngredients, newServings);
@@ -37,4 +37,27 @@ using namespace std;
 
         return found;
     }
+//Function clearList
+	void CookieList::clearList()
+	{  
+	    Node* temp = first;
+	
+	    while (first != nullptr)
+	    {
+	        first = first->getNext();
+	        delete temp;
+	        temp = first;
+	    }
+	    last = nullptr;
+	    count = 0;
+	}
+
+		
+
+
+
+
+
+
+
 
