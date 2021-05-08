@@ -11,12 +11,15 @@ class CookieType{
     public:
         CookieType(){ calories = 0;}
         CookieType(string name, size_t calorieNum){ cookieName = name; calories = calorieNum;}
+    
         string getName() const{ return cookieName;}
         size_t getCalories() const{return calories;}
+    
         void setName(const string newName){cookieName = newName;}
         void setCalories(const size_t newCalories){calories = newCalories;}
+    
         ~CookieType(){}
-    protected:
+    private:
         string cookieName;
         size_t calories;
     
@@ -25,10 +28,13 @@ class CookieType{
 class Cookie : public CookieType{
     public:
         Cookie(){numOfServings = 0;}
-        Cookie(string name, size_t calorieNum, set<string> ingredients, size_t numOfServings){cookieName = name;};
+        Cookie(string name, size_t calorieNum, set<string> ingredients, 
+                size_t numOfServings){cookieName = name;};
+    
         size_t getServings() const{return numOfServings;}
         set<string> getIngredients() const{return ingredients;}
         Cookie& getCookie(){return *this;}
+    
         ~Cookie(){}
 
         void setServings(const size_t newServings){numOfServings = newServings;}
@@ -45,7 +51,7 @@ class Cookie : public CookieType{
             cout << "Number of Calories: " << calories << endl;
         }
 
-    protected:
+    private:
         set<string> ingredients;
         size_t numOfServings;
     
