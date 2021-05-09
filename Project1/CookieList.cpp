@@ -52,11 +52,15 @@ using namespace std;
 	    count = 0;
 	}
 // The Big Three
-	CookieList(const CookieList& otherCookieList);
-	CookieList& CookieList::operator=(const CookieList& otherCookieList)// for calling helper function	
+	CookieList::CookieList(const CookieList& otherCookieList)
+	{
+		
+		
+	}
+	CookieList& CookieList::operator=(const CookieList& otherCookieList)	
 	{
 		if(count == 0)
-	    	copyCallingObjIsEmpty(otherCookieList); //
+	    	copyCallingObjIsEmpty(otherCookieList); 
 		
 		
 		
@@ -69,18 +73,10 @@ using namespace std;
 	}
 
 //helper Function
-//Function copyCallingObjIsEmpty
-    CookieList::getFirst() // umm, I'm still confused about CookieList is singly but it have 2 node, I'll fix that later. If you figure out, u can change it T.T
-    {
-        return first;
-    }
-    CookieList::getLast()
-    {
-        return last;
-    }
+//Function copy
 void CookieList::copyCallingObjIsEmpty(const CookieList& otherCookieList)
 {
-    Node* temp = otherCookieList.getFirst();
+    Node* temp = otherCookieList.first;
     while(temp != nullptr)
     {
         addCookie(temp->getCookie());
@@ -91,7 +87,7 @@ void CookieList::copyCallingObjIsEmpty(const CookieList& otherCookieList)
 //Function copyObjectsSameLength
 void CookieList::copyObjectsSameLength(const CookieList& otherCookieList)
 {
-    Node* temp = otherCookieList.getFirst();
+    Node* temp = otherCookieList.first;
     Node* tempCalling = first;
     while(temp!= nullptr)
     {
