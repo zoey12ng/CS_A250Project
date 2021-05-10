@@ -37,6 +37,23 @@ using namespace std;
 
         return found;
     }
+
+// Print functions
+	void CookieList::printAllCookies() const
+	{
+	    if(first == nullptr)
+	        cerr <<"List is empty";
+	    else
+	    {
+	        Node* currentNode = first;
+	        while( currentNode != nullptr)
+	        {
+	            cout << currentNode->getCookie.getName() << " ";
+	            currentNode = currentNode->getNext();
+	        }
+	    }
+	}
+
 //Function clearList
 	void CookieList::clearList()
 	{  
