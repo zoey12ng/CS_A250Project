@@ -48,7 +48,7 @@ using namespace std;
 	        Node* currentNode = first;
 	        while( currentNode != nullptr)
 	        {
-	            cout << currentNode->getCookie.getName() << " ";
+	            cout << currentNode->getCookie().getName() << " ";
 	            currentNode = currentNode->getNext();
 	        }
 	    }
@@ -79,13 +79,16 @@ using namespace std;
 		if(count == 0)
 	    		copyCallingObjIsEmpty(otherCookieList); 
 		
-		
-		
-		
-		
-		
-		
+		else if(count > otherCookieList.count)
+				copyCallingObjLonger(otherCookieList);
+
+		else if(count < otherCookieList.count)
+				copyCallingObjShorter(otherCookieList);
+
+		else copyObjectsSameLength(otherCookieList);
+			
 	}
+	
 	CookieList::~CookieList()
 	{
 	   clearList();
@@ -100,6 +103,7 @@ void CookieList::copyCallingObjIsEmpty(const CookieList& otherCookieList)
     {
         addCookie(temp->getCookie());
         temp = temp->getNext();
+		count++;
     }
 }
 
@@ -111,9 +115,55 @@ void CookieList::copyObjectsSameLength(const CookieList& otherCookieList)
     while(temp!= nullptr)
     {
         tempCalling->setCookie(temp->getCookie());
+		temp = temp->getNext();
+		tempCalling = tempCalling->getNext();
     }
 }
 
+void CookieList::copyCallingObjLonger(const CookieList& otherCookieList){
+	Node* temp = otherCookieList.first;
+    Node* tempCalling = first;
+	Node* prev;
+    while(temp!= nullptr)
+    {
+        tempCalling->setCookie(temp->getCookie());
+		temp = temp->getNext();
+		prev = tempCalling;
+		tempCalling = tempCalling->getNext();
+    }
+
+	last = prev;
+	
+	while(tempCalling != nullptr){
+		tempCalling = tempCalling->getNext();
+		prev = tempCalling;
+		prev->setNext(nullptr);
+		delete prev;
+		count--;
+	}
+
+}
+
+void CookieList::copyCallingObjShorter(const CookieList& otherCookieList){
+
+	Node* temp = otherCookieList.first;
+    Node* tempCalling = first;
+
+    while(tempCalling != nullptr)
+    {
+        tempCalling->setCookie(temp->getCookie());
+		temp = temp->getNext();
+		tempCalling = tempCalling->getNext();
+    }
+
+
+	
+	while(temp != nullptr){
+		addCookie(temp->getCookie());
+		temp = temp->getNext();
+		count++;
+	}
+}
 
 
 
