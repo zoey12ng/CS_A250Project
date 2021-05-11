@@ -42,7 +42,7 @@ using namespace std;
 	void CookieList::printAllCookies() const
 	{
 	    if(first == nullptr)
-	        cerr <<"List is empty";
+	        cerr << "List is empty";
 	    else
 	    {
 	        Node* currentNode = first;
