@@ -1,7 +1,7 @@
 #include "CookieList.h"
 
 using namespace std;
-
+//
 // Function addCookie
 	void CookieList::addCookie(const Cookie& aCookie){
         last->setNext(new Node(aCookie, nullptr));
@@ -103,7 +103,7 @@ void CookieList::copyCallingObjIsEmpty(const CookieList& otherCookieList)
     {
         addCookie(temp->getCookie());
         temp = temp->getNext();
-		count++;
+		count++; //?
     }
 }
 
