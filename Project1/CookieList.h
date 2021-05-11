@@ -69,7 +69,8 @@ public:
 	
 private:
      // Part C 
-     getCookieLocation(size_t cookieSelect); // dont have return value
+     	Node* getCookieLocation(size_t cookieSelect);
+	
 	// Helper functions for copy assignment operator
 	void copyCallingObjIsEmpty(const CookieList& otherCookieList);
 	void copyObjectsSameLength(const CookieList& otherCookieList);
