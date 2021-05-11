@@ -27,7 +27,7 @@ class CookieList
 {
 public:
 	// Constructors
-	CookieList() : first(0), last(0), count(0){}
+	CookieList() : first(nullptr), last(nullptr), count(0){}
 	
 	// Function addCookie
 	void addCookie(const Cookie& aCookie);
