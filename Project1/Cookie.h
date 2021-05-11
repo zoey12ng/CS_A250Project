@@ -20,8 +20,8 @@
 class Cookie : public CookieType{
     public:
         Cookie(){numOfServings = 0;}
-        //Overloaded constructor is not correct
-        Cookie(string name, size_t calorieNum, set<string> ingredients, 
+
+        CookieType::CookieType(string &name, size_t calorieNum): Cookie(set<string> &ingredients, 
                     size_t numOfServings);
                 
         void setServings(const size_t newServings);
