@@ -31,7 +31,10 @@ void processChoice(CookieList& cookieList){
         
         switch(choice){
             case 'a':
-                      
+                if(cookieList.isEmpty())
+                        cerr << " => There are no recipes in the list." << endl;
+                else 
+                        cookieList.printAllCookies();
                 break;
             case 'b':
                 break;
