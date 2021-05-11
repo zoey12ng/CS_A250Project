@@ -37,10 +37,22 @@ void processChoice(CookieList& cookieList){
                         cookieList.printAllCookies();
                 break;
             case 'b':
+                if(cookieList.isEmpty())
+                        cerr << " => There are no recipes in the list." << endl;
+                else
+                        .....
                 break;
             case 'c':
+                if(cookieList.isEmpty())
+                        cerr << " => There are no recipes in the list." << endl;
+                else
+                        .....
                 break;
             case 'd':
+                if(cookieList.isEmpty())
+                        cerr << " => There are no recipes in the list." << endl;
+                else
+                        .......
                 break;
             case 'e':
                 cout << endl << "Thank you for using our software. Good bye!";
