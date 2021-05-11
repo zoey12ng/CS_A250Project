@@ -17,12 +17,12 @@ using namespace std;
 
 // Accessor function
 	size_t CookieList::getCount() const{
-        return count;
+        	return count;
     }
 
 // Boolean functions
 	bool CookieList::isEmpty() const{
-        return count == 0;
+        	return count == 0;
     }
 	bool CookieList::searchCookie(const std::string& aCookie) const{
         Node* currentNode = first;
@@ -73,6 +73,9 @@ using namespace std;
 	{
 		
 		
+		
+		
+		
 	}
 	CookieList& CookieList::operator=(const CookieList& otherCookieList)	
 	{
@@ -103,7 +106,7 @@ void CookieList::copyCallingObjIsEmpty(const CookieList& otherCookieList)
     {
         addCookie(temp->getCookie());
         temp = temp->getNext();
-		count++; //?
+		count++; 
     }
 }
 
@@ -122,7 +125,7 @@ void CookieList::copyObjectsSameLength(const CookieList& otherCookieList)
 
 void CookieList::copyCallingObjLonger(const CookieList& otherCookieList){
 	Node* temp = otherCookieList.first;
-    Node* tempCalling = first;
+    	Node* tempCalling = first;
 	Node* prev;
     while(temp!= nullptr)
     {
