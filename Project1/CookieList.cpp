@@ -1,7 +1,22 @@
+/*
+    Group No Idea
+    Alvarez, Mauricio (41298)
+    Nguyen, Thu (41298)
+
+    Date (month in letters)
+
+    CS A250
+    Project 1
+*/
+
 #include "CookieList.h"
 
+#include <iostream>
+
+#include <iomanip>
+
 using namespace std;
-//
+
 // Function addCookie
 	void CookieList::addCookie(const Cookie& aCookie){
         last->setNext(new Node(aCookie, nullptr));
@@ -30,7 +45,7 @@ using namespace std;
 
         while(currentNode != nullptr && !found){
             if(currentNode->getCookie().getName() == aCookie){
-                found == true;
+                found = true;
             }
             currentNode = currentNode->getNext();
         }
@@ -42,18 +57,23 @@ using namespace std;
 	void CookieList::printAllCookies() const
 	{
 	    if(first == nullptr)
-	        cerr << "List is empty";
+	        cerr <<"List is empty";
 	    else
 	    {
+	        for(int i = 0; i < 65; i++)   // we need to print it follow the output!!
+                cout << "*";
+            cout << endl << setw(38) << "COOKIE RECIPES" << endl; 
+            for(int i = 0; i < 65; i++)
+                cout << "*";
 	        Node* currentNode = first;
 	        while( currentNode != nullptr)
 	        {
-	            cout << currentNode->getCookie().getName() << " ";
+	            cout << setw(26) << currentNode->getCookie().getName() << endl;
 	            currentNode = currentNode->getNext();
 	        }
 	    }
 	}
-
+	
 //Function clearList
 	void CookieList::clearList()
 	{  
@@ -71,13 +91,17 @@ using namespace std;
 // The Big Three
 	CookieList::CookieList(const CookieList& otherCookieList)
 	{
-		
-		
-		
-		
-		
+		count = otherCookieList.count;
+	    first = otherCookieList.first;
+	    last = otherCookieList.last;
+	    while(first != nullptr)
+	    {
+	        addCookie(first->getCookie());
+            first = first->getNext();
+		    count++; 
+	    }
 	}
-	CookieList& CookieList::operator=(const CookieList& otherCookieList)	
+	CookieList& CookieList::operator=(const CookieList& otherCookieList)	//not correct
 	{
 		if(count == 0)
 	    		copyCallingObjIsEmpty(otherCookieList); 
@@ -125,7 +149,7 @@ void CookieList::copyObjectsSameLength(const CookieList& otherCookieList)
 
 void CookieList::copyCallingObjLonger(const CookieList& otherCookieList){
 	Node* temp = otherCookieList.first;
-    	Node* tempCalling = first;
+    Node* tempCalling = first;
 	Node* prev;
     while(temp!= nullptr)
     {
@@ -135,7 +159,7 @@ void CookieList::copyCallingObjLonger(const CookieList& otherCookieList){
 		tempCalling = tempCalling->getNext();
     }
 
-	last = prev;
+	last = prev; // pre is not initilaze
 	
 	while(tempCalling != nullptr){
 		tempCalling = tempCalling->getNext();

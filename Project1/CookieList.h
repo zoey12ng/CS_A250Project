@@ -1,5 +1,12 @@
 /*
-	(name header)
+    Group No Idea
+    Alvarez, Mauricio (41298)
+    Nguyen, Thu (41298)
+
+    Date (month in letters)
+
+    CS A250
+    Project 1
 */
 
 #ifndef COOKIELIST_H
@@ -10,7 +17,7 @@
 class Node
 {
 public:
-	Node() : cookie(), next(0) {}
+	Node() : cookie(), next(nullptr) {}
 	Node(const Cookie& newCookie, Node* newNext)
 		: cookie(newCookie), next(newNext) {}
 	Cookie& getCookie() { return cookie; } 
@@ -27,7 +34,7 @@ class CookieList
 {
 public:
 	// Constructors
-	CookieList() : first(nullptr), last(nullptr), count(0){}
+	CookieList();
 	
 	// Function addCookie
 	void addCookie(const Cookie& aCookie);
@@ -46,13 +53,23 @@ public:
 
 	// Function clearList
 	void clearList();
-
+	
+	//Part C
+    void printCookiesSelection() const;
+    void printRecipe(size_t cookieSelect);
+    
 	// The Big Three
 	CookieList(const CookieList& otherCookieList);
 	CookieList& operator=(const CookieList& otherCookieList);		
 	~CookieList();
-
+	
+	//CookieList::printLimitedCalories.
+	void printLimitedCalories(size_t maxOfCalo); //partC
+	
+	
 private:
+     // Part C 
+     getCookieLocation(size_t cookieSelect); // dont have return value
 	// Helper functions for copy assignment operator
 	void copyCallingObjIsEmpty(const CookieList& otherCookieList);
 	void copyObjectsSameLength(const CookieList& otherCookieList);
