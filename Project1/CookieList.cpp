@@ -80,10 +80,10 @@ using namespace std;
 	    		copyCallingObjIsEmpty(otherCookieList); 
 		
 		else if(count > otherCookieList.count)
-				copyCallingObjLonger(otherCookieList);
+			copyCallingObjLonger(otherCookieList);
 
 		else if(count < otherCookieList.count)
-				copyCallingObjShorter(otherCookieList);
+			copyCallingObjShorter(otherCookieList);
 
 		else copyObjectsSameLength(otherCookieList);
 			
@@ -145,9 +145,8 @@ void CookieList::copyCallingObjLonger(const CookieList& otherCookieList){
 }
 
 void CookieList::copyCallingObjShorter(const CookieList& otherCookieList){
-
 	Node* temp = otherCookieList.first;
-    Node* tempCalling = first;
+	Node* tempCalling = first;
 
     while(tempCalling != nullptr)
     {
@@ -155,9 +154,6 @@ void CookieList::copyCallingObjShorter(const CookieList& otherCookieList){
 		temp = temp->getNext();
 		tempCalling = tempCalling->getNext();
     }
-
-
-	
 	while(temp != nullptr){
 		addCookie(temp->getCookie());
 		temp = temp->getNext();
