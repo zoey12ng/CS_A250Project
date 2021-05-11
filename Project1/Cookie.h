@@ -28,7 +28,7 @@ class Cookie : public CookieType{
         void setIngredients(const vector<string> &newIngredients);
     
         size_t getServings() const;
-        set<string>& getIngredients() const; //&
+        set<string>& getIngredients() const; 
         Cookie& getCookie();
 
         void printRecipe() const;
