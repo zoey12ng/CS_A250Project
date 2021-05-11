@@ -39,7 +39,7 @@ void processChoice(CookieList& cookieList){
             case 'd':
                 break;
             case 'e':
-                cout << endl << "Thank you for using our software, Good bye!";
+                cout << endl << "Thank you for using our software. Good bye!";
                 break;
             default:
                 cout << endl << " => Sorry. That is not a selection." << endl << endl;
@@ -49,7 +49,7 @@ void processChoice(CookieList& cookieList){
                 cin >> tryAgain;
                 if(tryAgain == 'n'){
                     choice = 'e';
-                    cout << endl << "Thank you for using our software, Good bye!";
+                    cout << endl << "Thank you for using our software. Good bye!";
                 }else displayMenu();
                 break;
         }
