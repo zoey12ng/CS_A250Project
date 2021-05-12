@@ -149,8 +149,8 @@ void CookieList::copyObjectsSameLength(const CookieList& otherCookieList)
 
 void CookieList::copyCallingObjLonger(const CookieList& otherCookieList){
 	Node* temp = otherCookieList.first;
-    Node* tempCalling = first;
-	Node* prev;
+    	Node* tempCalling = first;
+	Node* prev = nullptr;
     while(temp!= nullptr)
     {
         tempCalling->setCookie(temp->getCookie());
