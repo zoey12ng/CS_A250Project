@@ -103,30 +103,35 @@ using namespace std;
 	}
 	CookieList& CookieList::operator=(const CookieList& otherCookieList)	
 	{
-		if(count == 0) 
+		if(&otherCookieList == this) 
 		{
-	    		copyCallingObjIsEmpty(otherCookieList);
+			cerr << "Attempted assignment to itself.";
 		}
-		
-		//if( &otherCookieList == this) // check for two object are the same??
-		//{
-			//cerr << "Attempted assignment to itself." <<endl;
-		//}
-		else if (count != otherCookieList.count) //check for same length
+		else
 		{
-			if (count > otherCookieList.count) //longer
+			if( count == 0) 
+	    			copyCallingObjIsEmpty(otherCookieList);
+			else if (count == otherCookieList.count) 
+				copyObjectsSameLength(otherCookieList);
+			else if(count > otherCookieList.count) 
 				copyCallingObjLonger(otherCookieList);
-			else
-				copyCallingObjShorter(otherCookieList); //shorter
+			else if(count < otherCookieList.count)
+				copyCallingObjShorter(otherCookieList);
 		}
-		copyObjectsSameLength(otherCookieList);
-		
 		return *this;
 	}
 	//Part C
-	void printCookiesSelection() const;
-	void printRecipe(size_t cookieSelect)
+	void CookieList::printCookiesSelection() const
 	{
+		
+		
+	}
+	void CookieList::printRecipe(size_t cookieSelect)
+	{
+		
+		
+		
+	}
 	void CookieList::printLimitedCalories(size_t maxOfCalo)
 	{
 		Node* current = first;
@@ -136,7 +141,6 @@ using namespace std;
 				printCalories();
 		}
 	}
-		
 	
 	CookieList::~CookieList()
 	{
