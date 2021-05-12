@@ -159,7 +159,7 @@ void CookieList::copyCallingObjLonger(const CookieList& otherCookieList){
 		tempCalling = tempCalling->getNext();
     }
 
-	last = prev; // pre is not initilaze
+	last = prev;
 	
 	while(tempCalling != nullptr){
 		tempCalling = tempCalling->getNext();
@@ -168,7 +168,6 @@ void CookieList::copyCallingObjLonger(const CookieList& otherCookieList){
 		delete prev;
 		count--;
 	}
-
 }
 
 void CookieList::copyCallingObjShorter(const CookieList& otherCookieList){
