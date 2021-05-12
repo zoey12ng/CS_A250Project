@@ -123,6 +123,20 @@ using namespace std;
 		
 		return *this;
 	}
+	//Part C
+	void printCookiesSelection() const;
+	void printRecipe(size_t cookieSelect)
+	{
+	void CookieList::printLimitedCalories(size_t maxOfCalo)
+	{
+		Node* current = first;
+		while(current != nullptr)
+		{
+			if(current->getCookie().getCalories() <= maxOfCalo)
+				printCalories();
+		}
+	}
+		
 	
 	CookieList::~CookieList()
 	{
