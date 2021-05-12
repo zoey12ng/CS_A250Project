@@ -101,19 +101,27 @@ using namespace std;
 		    count++; 
 	    }
 	}
-	CookieList& CookieList::operator=(const CookieList& otherCookieList)	//not correct
+	CookieList& CookieList::operator=(const CookieList& otherCookieList)	
 	{
-		if(count == 0)
-	    		copyCallingObjIsEmpty(otherCookieList); 
+		if(count == 0) 
+		{
+	    		copyCallingObjIsEmpty(otherCookieList);
+		}
 		
-		else if(count > otherCookieList.count)
-			copyCallingObjLonger(otherCookieList);
-
-		else if(count < otherCookieList.count)
-			copyCallingObjShorter(otherCookieList);
-
-		else copyObjectsSameLength(otherCookieList);
-			
+		//if( &otherCookieList == this) // check for two object are the same??
+		//{
+			//cerr << "Attempted assignment to itself." <<endl;
+		//}
+		else if (count != otherCookieList.count) //check for same length
+		{
+			if (count > otherCookieList.count) //longer
+				copyCallingObjLonger(otherCookieList);
+			else
+				copyCallingObjShorter(otherCookieList); //shorter
+		}
+		copyObjectsSameLength(otherCookieList);
+		
+		return *this;
 	}
 	
 	CookieList::~CookieList()
