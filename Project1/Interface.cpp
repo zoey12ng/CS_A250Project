@@ -14,17 +14,15 @@ void displayMenu(){
     cout << setw(28) << "c. Print cookie calories" << endl;
     cout << setw(29) << "d. Print limited calories" << endl;
     cout << setw(14) << "e. To exit" << endl;
-
-    cout << "\nEnter your choice: ";
-
 }
 
 void processChoice(CookieList& cookieList){
-    char choice;
-    char tryAgain;
-    
-    
+        
+    cout << "\nEnter your choice: ";
 
+    char choice; // initialize char choice and char tryAgain.
+    char tryAgain;
+   
     while(choice != 'e'){
         
         cin >> choice;
@@ -52,21 +50,22 @@ void processChoice(CookieList& cookieList){
                 if(cookieList.isEmpty())
                         cerr << " => There are no recipes in the list." << endl;
                 else
-                        .......
+                        cookieList.
                 break;
             case 'e':
                 cout << endl << "Thank you for using our software. Good bye!";
                 break;
             default:
-                cout << endl << " => Sorry. That is not a selection." << endl << endl;
+                cout << endl << " => Sorry. That is not a selection.\n\n";
                 for(int i = 0; i < 65; i++)
                     cout << "=";
-                cout << endl << endl << "Would you like to try again (y/n)? ";
+                cout << "\n\nWould you like to try again (y/n)? ";
                 cin >> tryAgain;
                 if(tryAgain == 'n'){
                     choice = 'e';
                     cout << endl << "Thank you for using our software. Good bye!";
-                }else displayMenu();
+                }else 
+                        displayMenu();
                 break;
         }
     }
