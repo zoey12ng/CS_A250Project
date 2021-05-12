@@ -50,7 +50,7 @@ void processChoice(CookieList& cookieList){
                 if(cookieList.isEmpty())
                         cerr << " => There are no recipes in the list." << endl;
                 else
-                        cookieList.
+                        cookieList.printLimitedCalories();
                 break;
             case 'e':
                 cout << endl << "Thank you for using our software. Good bye!";
