@@ -60,7 +60,7 @@ using namespace std;
 	        cerr <<"List is empty";
 	    else
 	    {
-	        for(int i = 0; i < 65; i++)   // we need to print it follow the output!!
+	        for(int i = 0; i < 65; i++)   // we need to print it follow the output of partC!!
                 cout << "*";
             cout << endl << setw(38) << "COOKIE RECIPES" << endl; 
             for(int i = 0; i < 65; i++)
