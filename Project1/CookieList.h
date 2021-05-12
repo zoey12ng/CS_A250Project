@@ -55,17 +55,14 @@ public:
 	void clearList();
 	
 	//Part C
-    void printCookiesSelection() const;
-    void printRecipe(size_t cookieSelect);
+	void printCookiesSelection() const;
+	void printRecipe(size_t cookieSelect);
+	void printLimitedCalories(size_t maxOfCalo); 
     
 	// The Big Three
 	CookieList(const CookieList& otherCookieList);
 	CookieList& operator=(const CookieList& otherCookieList);		
 	~CookieList();
-	
-	//CookieList::printLimitedCalories.
-	void printLimitedCalories(size_t maxOfCalo); //partC
-	
 	
 private:
      // Part C 
