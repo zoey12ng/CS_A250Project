@@ -120,6 +120,7 @@ using namespace std;
 		}
 		return *this;
 	}
+
 	//Part C
 	void CookieList::printCookiesSelection() const
 	{
