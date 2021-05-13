@@ -73,7 +73,7 @@ void processChoice(CookieList& cookieList){
                     cout << endl << "Thank you for using our software. Good bye!";
                 }else 
                         displayMenu();
-                break;
+                break; 
         }
     }
 }
