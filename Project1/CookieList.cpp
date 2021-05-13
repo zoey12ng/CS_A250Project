@@ -136,6 +136,7 @@ using namespace std;
 	{
 		........
 	}
+
 	void CookieList::printLimitedCalories(size_t maxOfCalo)
 	{
 		Node* current = first;
@@ -143,6 +144,7 @@ using namespace std;
 		{
 			if(current->getCookie().getCalories() <= maxOfCalo)
 				printCalories();
+				current = current->getNext();
 		}
 	}
 	
