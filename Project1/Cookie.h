@@ -18,9 +18,10 @@
 
 class Cookie : public CookieType{
     public:
-        Cookie() : (numOfServings = 0) {}.  // original :    Cookie(){numOfServings = 0;}
+        Cookie() : numOfServings(0) {}  // original :    Cookie(){numOfServings = 0;}
         Cookie(const std::string &name, size_t calorieNum, const std::set<std::string> &ingredients, 
                     size_t numOfServings);
+        
                 
         void setServings(const size_t newServings);
         void setIngredients(const std::vector<std::string> &newIngredients);
