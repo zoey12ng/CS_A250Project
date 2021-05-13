@@ -109,9 +109,9 @@ using namespace std;
 		}
 		else
 		{
-			if( count == 0) //empty
+			if( count == 0) 
 	    			copyCallingObjIsEmpty(otherCookieList);
-			else if (count == otherCookieList.count) //same length
+			else if (count == otherCookieList.count) 
 				copyObjectsSameLength(otherCookieList);
 			else if(count > otherCookieList.count) 
 				copyCallingObjLonger(otherCookieList);
@@ -123,13 +123,17 @@ using namespace std;
 	//Part C
 	void CookieList::printCookiesSelection() const
 	{
-		
-		
+		Node* current = first;
+		while(current != nullptr)
+		{
+			cout << current->getCookie().getName() << endl;
+			current = current->getNext();
+		}
 		
 	}
 	void CookieList::printRecipe(size_t cookieSelect)
 	{
-		......
+		........
 	}
 	void CookieList::printLimitedCalories(size_t maxOfCalo)
 	{
