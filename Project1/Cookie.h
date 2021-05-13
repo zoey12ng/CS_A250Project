@@ -40,7 +40,6 @@ class Cookie : public CookieType{
     private:
         std::set<std::string> ingredients;
         size_t numOfServings;
-    
 };
 
 #endif
