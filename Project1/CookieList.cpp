@@ -121,17 +121,8 @@ using namespace std;
 		return *this;
 	}
 	//Part C
-	void CookieList::printCookiesSelection() const
-	{
-		
-		
-	}
-	void CookieList::printRecipe(size_t cookieSelect)
-	{
-		
-		
-		
-	}
+	//void CookieList::printCookiesSelection() const;
+	//void CookieList::printRecipe(size_t cookieSelect);
 	void CookieList::printLimitedCalories(size_t maxOfCalo)
 	{
 		Node* current = first;
