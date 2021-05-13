@@ -23,9 +23,7 @@ Cookie::Cookie(const string& name, size_t calorieNum, const set<string>& newIngr
        numOfServings = newServings;
     }
           
-    // {              
-    //     setName(name);                     
-    // }
+    
 
 void Cookie::setServings(const size_t newServings) {
         numOfServings = newServings;
