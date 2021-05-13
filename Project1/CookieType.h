@@ -18,18 +18,18 @@
 class CookieType{
     public:
         CookieType();
-        CookieType(string name, size_t calorieNum); //how do you pass an object (string)? I try const string& name but it said error 
+        CookieType(const std::string& name, size_t calorieNum);
         
-        void setName(const string newName);        //?  said" error: ‘string’ does not name a type"
+        void setName(const std::string& newName);
         void setCalories(const size_t newCalories);
         
-        string getName() const;                        //? said" error: ‘string’ does not name a type"
+        std::string getName() const;
         size_t getCalories() const;
         
         ~CookieType(){}
         
     private:
-        string cookieName;         //? said" error: ‘string’ does not name a type"
+        std::string cookieName;
         size_t calories;
 };
 
