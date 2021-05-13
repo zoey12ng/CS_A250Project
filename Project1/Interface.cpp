@@ -30,11 +30,7 @@ void processChoice(CookieList& cookieList){
         switch(choice){
             case 'a':
                 if(cookieList.isEmpty())
-                        cerr << " => There are no recipes in the list.\n\n";
-                        for(int i = 0; i < 65; i++)
-                                cout << "=";
-                        cout << "\n\n";
-                        cout << "Please contact your administrator. Good bye!" << endl;
+                        cerr << " => There are no recipes in the list." << endl;
                 else 
                         cookieList.printAllCookies();
                 break;
@@ -42,7 +38,7 @@ void processChoice(CookieList& cookieList){
                 if(cookieList.isEmpty())
                         cerr << " => There are no recipes in the list." << endl;
                 else
-                        
+                        cookieList.printCookiesSelection();
                 break;
             case 'c':
                 if(cookieList.isEmpty())
@@ -54,7 +50,7 @@ void processChoice(CookieList& cookieList){
                 if(cookieList.isEmpty())
                         cerr << " => There are no recipes in the list." << endl;
                 else
-                        cookieList.printLimitedCalories();
+                        cookieList.printLimitedCalories(); //??
                 break;
             case 'e':
                 cout << endl << "Thank you for using our software. Good bye!";
