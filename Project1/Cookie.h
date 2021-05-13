@@ -13,7 +13,6 @@
 #define COOKIE _H
 
 #include "CookieType.h"
-#include <iostream>
 #include <set>
 #include <vector>
 
@@ -21,14 +20,14 @@ class Cookie : public CookieType{
     public:
         Cookie(){numOfServings = 0;}
 
-        CookieType::CookieType(string &name, size_t calorieNum): Cookie(set<string> &ingredients, 
+        Cookie(const std::string &name, size_t calorieNum, const std::set<std::string> &ingredients, 
                     size_t numOfServings);
                 
         void setServings(const size_t newServings);
-        void setIngredients(const vector<string> &newIngredients);
+        void setIngredients(const std::vector<std::string> &newIngredients);
     
         size_t getServings() const;
-        set<string>& getIngredients() const; 
+        std::set<std::string> getIngredients() const; 
         Cookie& getCookie();
 
         void printRecipe() const;
@@ -40,7 +39,7 @@ class Cookie : public CookieType{
         ~Cookie(){}
 
     private:
-        set<string> ingredients;
+        std::set<std::string> ingredients;
         size_t numOfServings;
     
 };

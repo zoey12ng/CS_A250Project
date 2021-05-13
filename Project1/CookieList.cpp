@@ -22,6 +22,7 @@ using namespace std;
         last->setNext(new Node(aCookie, nullptr));
         last = last->getNext();
     }
+
 	//addCookie overloaded
 	void CookieList::addCookie(const std::string& newName, size_t newCalories,
 		const std::set<std::string>& newIngredients, size_t newServings){
@@ -134,7 +135,7 @@ using namespace std;
 	}
 	void CookieList::printRecipe(size_t cookieSelect)
 	{
-		........
+		//........
 	}
 
 	void CookieList::printLimitedCalories(size_t maxOfCalo)
@@ -152,6 +153,7 @@ using namespace std;
 	{
 	   clearList();
 	}
+
 // Part C 
 Node* CookieList::getCookieLocation(size_t cookieSelect) // i dont know it correct or not :(
 {

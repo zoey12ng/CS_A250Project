@@ -19,9 +19,9 @@ CookieType::CookieType(string name, size_t calorieNum){
     calories = calorieNum;
 }
     
-string CookieType::getName() { return cookieName;}
+string CookieType::getName() const { return cookieName;}
 
-size_t CookieType::getCalories(){return calories;}
+size_t CookieType::getCalories() const {return calories;}
     
 void CookieType::setName(string newName){
     cookieName = newName;

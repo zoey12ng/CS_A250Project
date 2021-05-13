@@ -16,7 +16,7 @@
 #include <vector>
 using namespace std;
 
-Cookie::Cookie(string name, size_t calorieNum, set<string> ingredients, size_t numOfServings)
+Cookie::Cookie(const string& name, size_t calorieNum, const set<string>& ingredients, size_t numOfServings)
 
 //Cookie::Cookie(string name, size_t calorieNum, set<string> ingredients, 
 //            size_t numOfServings) : CookieType(string name, size_t calorieNum)
@@ -26,8 +26,8 @@ Cookie::Cookie(string name, size_t calorieNum, set<string> ingredients, size_t n
 //        numOfServings = newServings;
 //    }
           
-    {                                   
-            cookieName = name;
+    {              
+        setName(name);                     
     }
 
 void Cookie::setServings(const size_t newServings) {
@@ -45,17 +45,20 @@ set<string> Cookie::getIngredients() const {return ingredients;}
 Cookie& Cookie::getCookie() {return *this;}
 
 void Cookie::printRecipe() const {
-    cout << "Cookie: " << cookieName << endl;
+    cout << "Cookie: " << getName() << endl;
     cout << "Number of Servings: " << numOfServings << endl;
     }
 
 void Cookie::printCalories() const{
-    cout << "Cookie: " << cookieName << endl;
-    cout << "Number of Calories: " << calories << endl;
+    cout << "Cookie: " << getName() << endl;
+    cout << "Number of Calories: " << getCalories() << endl;
     }
 
 void Cookie::printIngredients() const{
-            cout << "Ingredients: " << ingredients << " ";
+            cout << "Ingredients: ";
+
+            for(auto i : ingredients)
+                cout << i << " ";
         }
         
 Cookie::~Cookie(){}
