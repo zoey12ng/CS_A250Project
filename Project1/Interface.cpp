@@ -50,7 +50,10 @@ void processChoice(CookieList& cookieList){
                 if(cookieList.isEmpty())
                         cerr << " => There are no recipes in the list." << endl;
                 else
-                        cookieList.printLimitedCalories(); //??
+                    cout << "What is the maximun # of calories (100-200)? ";
+                    cin >> maxOfCalo;
+                    cout <<"\n\n";
+                    cookieList.printLimitedCalories(maxOfCalo);
                 break;
             case 'e':
                 cout << endl << "Thank you for using our software. Good bye!";
