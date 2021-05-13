@@ -20,16 +20,16 @@ class CookieType{
         CookieType();
         CookieType(string name, size_t calorieNum); //how do you pass an object (string)? I try const string& name but it said error 
         
-        void setName(const string newName);
+        void setName(const string newName);        //?  said" error: ‘string’ does not name a type"
         void setCalories(const size_t newCalories);
         
-        string getName() const;
+        string getName() const;                        //? said" error: ‘string’ does not name a type"
         size_t getCalories() const;
         
         ~CookieType(){}
         
     private:
-        string cookieName;
+        string cookieName;         //? said" error: ‘string’ does not name a type"
         size_t calories;
 };
 
