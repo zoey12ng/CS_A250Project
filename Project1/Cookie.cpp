@@ -16,18 +16,11 @@
 #include <vector>
 using namespace std;
 
-Cookie::Cookie(const string& name, size_t calorieNum, const set<string>& ingredients, size_t numOfServings)
-
-//Cookie::Cookie(string name, size_t calorieNum, set<string> ingredients, 
-//            size_t numOfServings) : CookieType(string name, size_t calorieNum)
-//    {                                                                                   // I review lesson on Inheritance to see how implement correctly 
-                                                                                          //and it look like that. Can you check it out?
-//        ingredients = newIngredients;
-//        numOfServings = newServings;
-//    }
-          
-    {              
-        setName(name);                     
+Cookie::Cookie(const string& name, size_t calorieNum, const set<string>& ingredients, 
+               size_t numOfServings) : CookieType(name, calorieNum)
+   {                                                                                      
+       ingredients = newIngredients;
+       numOfServings = newServings;
     }
 
 void Cookie::setServings(const size_t newServings) {
