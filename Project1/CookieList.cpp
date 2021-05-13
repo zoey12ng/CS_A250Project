@@ -209,7 +209,6 @@ void CookieList::copyCallingObjLonger(const CookieList& otherCookieList){
 		count--;
 	}
 }
-
 void CookieList::copyCallingObjShorter(const CookieList& otherCookieList){
 	Node* temp = otherCookieList.first;
 	Node* tempCalling = first;
