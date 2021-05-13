@@ -151,13 +151,14 @@ using namespace std;
 	   clearList();
 	}
 // Part C 
-Node* getCookieLocation(size_t cookieSelect)
+Node* CookieList::getCookieLocation(size_t cookieSelect) // i dont know it correct or not :(
 {
-	
-	
-	..........
-	
-	
+	Node* temp = first;
+	for( int i = 0, i < cookieSelect, i++)
+	{
+		temp = temp->getNext();
+	}
+	return temp;	
 }
 //helper Function
 void CookieList::copyCallingObjIsEmpty(const CookieList& otherCookieList)
