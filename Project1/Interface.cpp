@@ -31,8 +31,10 @@ void processChoice(CookieList& cookieList){
             case 'a':
                 if(cookieList.isEmpty())
                         cerr << " => There are no recipes in the list.\n\n";
-                        cout << "=========================================================\n\n";
-                             << "Please contact your administrator. Good bye!" << endl;
+                        for(int i = 0; i < 65; i++)
+                                cout << "=";
+                        cout << "\n\n";
+                        cout << "Please contact your administrator. Good bye!" << endl;
                 else 
                         cookieList.printAllCookies();
                 break;
