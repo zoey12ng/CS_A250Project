@@ -59,7 +59,7 @@ void processChoice(CookieList& cookieList){
                 cout << endl << "Thank you for using our software. Good bye!";
                 break;
             default:
-                cout << endl << " => Sorry. That is not a selection.\n\n";
+                cout << endl << " => Sorry. That is not a selection.\n\n";   //use "\n\n" instead of << endl << endl
                 for(int i = 0; i < 65; i++)
                     cout << "=";
                 cout << "\n\nWould you like to try again (y/n)? ";
