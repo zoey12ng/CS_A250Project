@@ -155,7 +155,7 @@ using namespace std;
 	}
 
 // Part C 
-Node* CookieList::getCookieLocation(size_t cookieSelect) // i dont know it correct or not :(
+Node* CookieList::getCookieLocation(size_t cookieSelect) 
 {
 	Node* temp = first;
 	for( int i = 0, i < cookieSelect, i++)
