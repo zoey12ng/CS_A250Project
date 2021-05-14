@@ -30,11 +30,10 @@ void processChoice(CookieList& cookieList){
         switch(choice){
             case 'a':
                 if(cookieList.isEmpty())
-                        cerr << " => There are no recipes in the list.\n\n";
+                        cerr << " \n\n=> There are no recipes in the list.\n\n";
                         for(int i = 0; i < 65; i++)
                                 cout << "=";
-                        cout<<"\n\n";
-                        cout << " PLease contact your administrator. Good bye!"
+                        cout << "\n\nPLease contact your administrator. Good bye!"
                 else 
                         for(int i = 0; i < 65; i++)
                                 cout << "-";
@@ -42,18 +41,25 @@ void processChoice(CookieList& cookieList){
                         for(int i = 0; i < 65; i++)
                                 cout << "-";
                         cout << "\n\n";
-                        cookieList.printAllCookies();          //!!!!!!!
+                        cookieList.printAllCookies();       
                         cout <<"\n\nWould you like to continue (y/n)?";
+                        cin >> tryAgain;
                 break;
             case 'b':
                 if(cookieList.isEmpty())
                         cerr << " => There are no recipes in the list.\n\n";
                         for(int i = 0; i < 65; i++)
                                 cout << "=";
-                        cout<<"\n\n";
-                        cout << " PLease contact your administrartor. Good bye!"
+                        cout << "\n\nPLease contact your administrartor. Good bye!"
                 else
-                       
+                       for(int i = 0; i < 65; i++)
+                                cout << "-";
+                        cout << endl << setw(38) << "COOKIE RECIPES" << endl; 
+                        for(int i = 0; i < 65; i++)
+                                cout << "-";
+                        cout << "\n\nChoose a cookie to view the recipe.\n";
+                        cookieList.printAllCookies();  
+                        cout <<"\n\nYour choice: "
                         
                         
                         
@@ -97,7 +103,8 @@ void processChoice(CookieList& cookieList){
                 if(tryAgain == 'n'){
                     choice = 'e';
                     cout << endl << "Thank you for using our software. Good bye!";
-                }else 
+                }
+                 else 
                         displayMenu();
                 break; 
         }
