@@ -59,7 +59,7 @@ public:
 	void printCookiesSelection() const;
 	void printRecipe(size_t cookieSelect);
 	void printLimitedCalories(size_t maxOfCalo); 
-    
+	
 	// The Big Three
 	CookieList(const CookieList& otherCookieList);
 	CookieList& operator=(const CookieList& otherCookieList);		
@@ -67,7 +67,7 @@ public:
 	
 private:
      // Part C
-	 	void printAllCookies(); 
+	 	
      	Node* getCookieLocation(size_t cookieSelect);
 	
 	// Helper functions for copy assignment operator
