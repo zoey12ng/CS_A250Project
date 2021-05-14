@@ -40,19 +40,31 @@ void processChoice(CookieList& cookieList){
                 break;
             case 'b':
                 if(cookieList.isEmpty())
-                        cerr << " => There are no recipes in the list." << endl;
+                        cerr << " => There are no recipes in the list.\n\n";
+                        for(int i = 0; i < 65; i++)
+                                cout << "=";
+                        cout<<"\n\n";
+                        cout << " PLease contact your administrartor. Good bye!"
                 else
-                        cookieList.printCookiesSelection();
+                        cookieList.printCookiesSelection();...........?
                 break;
             case 'c':
                 if(cookieList.isEmpty())
-                        cerr << " => There are no recipes in the list." << endl;
+                        cerr << " => There are no recipes in the list.\n\n";
+                        for(int i = 0; i < 65; i++)
+                                cout << "=";
+                        cout<<"\n\n";
+                        cout << " PLease contact your administrartor. Good bye!"
                 else
-                        .....
+                        ..........
                 break;
             case 'd':
                 if(cookieList.isEmpty())
-                        cerr << " => There are no recipes in the list." << endl;
+                        cerr << " => There are no recipes in the list.\n\n";
+                        for(int i = 0; i < 65; i++)
+                                cout << "=";
+                        cout<<"\n\n";
+                        cout << " PLease contact your administrartor. Good bye!"
                 else
                     cout << "What is the maximun # of calories (100-200)? ";
                     cin >> maxOfCalo;
