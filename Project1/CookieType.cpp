@@ -30,5 +30,3 @@ void CookieType::setName(const string& newName){
 void CookieType::setCalories(size_t newCalories){
     calories = newCalories;
 }
-    
-CookieType::~CookieType(){}

@@ -1,9 +1,12 @@
 #include "Interface.h"
+#include "Testing.h"
 #include <iomanip>
 
 int main(){
-    //cout << "Hello World!";
-    int* test = nullptr;
+    CookieList temp;
+    displayMenu();
+    createCookieList(temp);
+    processChoice(temp);
     
     //displayMenu();
 
