@@ -34,9 +34,16 @@ void processChoice(CookieList& cookieList){
                         for(int i = 0; i < 65; i++)
                                 cout << "=";
                         cout<<"\n\n";
-                        cout << " PLease contact your administrartor. Good bye!"
+                        cout << " PLease contact your administrator. Good bye!"
                 else 
-                        cookieList.printAllCookies();
+                        for(int i = 0; i < 65; i++)
+                                cout << "-";
+                        cout << endl << setw(38) << "COOKIE RECIPES" << endl; 
+                        for(int i = 0; i < 65; i++)
+                                cout << "-";
+                        cout << "\n\n";
+                        cookieList.printAllCookies();          //!!!!!!!
+                        cout <<"\n\nWould you like to continue (y/n)?";
                 break;
             case 'b':
                 if(cookieList.isEmpty())
@@ -46,7 +53,14 @@ void processChoice(CookieList& cookieList){
                         cout<<"\n\n";
                         cout << " PLease contact your administrartor. Good bye!"
                 else
-                        cookieList.printCookiesSelection();...........?
+                       
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                 break;
             case 'c':
                 if(cookieList.isEmpty())
