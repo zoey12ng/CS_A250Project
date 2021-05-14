@@ -34,7 +34,7 @@ class CookieList
 {
 public:
 	// Constructors
-	CookieList();
+	CookieList() : first(nullptr), last(nullptr), count(0){};
 	
 	// Function addCookie
 	void addCookie(const Cookie& aCookie);
@@ -67,7 +67,7 @@ public:
 	
 private:
      // Part C
-	 	void CookieList::printAllCookies(); 
+	 	void printAllCookies(); 
      	Node* getCookieLocation(size_t cookieSelect);
 	
 	// Helper functions for copy assignment operator

@@ -12,6 +12,8 @@
 #ifndef COOKIETYPE_H
 #define COOKIETYPE _H
 
+#include <string>
+#include <cstddef>
 //#include //???? not <iostream> there is no need to include iostream in this file, 
 //because you are not printing anything,(ONLY the ones needed in this file)
 

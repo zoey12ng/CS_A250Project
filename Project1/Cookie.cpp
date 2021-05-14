@@ -30,7 +30,8 @@ void Cookie::setServings(const size_t newServings) {
     }
         
 void Cookie::setIngredients(const vector<string>& newIngredients){
-            //ingredients = newIngredients;
+            ingredients.clear();
+            ingredients.insert(newIngredients.begin(),newIngredients.end());
         }
             
 size_t Cookie::getServings() const {return numOfServings;}
