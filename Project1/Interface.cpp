@@ -63,13 +63,10 @@ void processChoice(CookieList& cookieList){
                         cin >> cookieSelection;
                         cout << "\n\n";
                         cookieList.printRecipe(cookieSelect);
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                        for(int i = 0; i < 65; i++)
+                                cout << "=";
+                        cout <<"\n\nWould you like to continue (y/n)?";
+                        cin >> tryAgain;
                 break;
             case 'c':
                 if(cookieList.isEmpty())
