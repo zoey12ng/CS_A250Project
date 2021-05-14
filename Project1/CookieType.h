@@ -12,8 +12,7 @@
 #ifndef COOKIETYPE_H
 #define COOKIETYPE _H
 
-//#include //???? not <iostream> there is no need to include iostream in this file, 
-//because you are not printing anything,(ONLY the ones needed in this file)
+#include <string>
 
 class CookieType{
     public:
