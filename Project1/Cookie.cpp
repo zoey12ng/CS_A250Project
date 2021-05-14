@@ -55,7 +55,6 @@ void Cookie::printIngredients() const{
 
             for(auto i : ingredients)
                 cout << i << " ";
-
         }
         
 Cookie::~Cookie(){}
