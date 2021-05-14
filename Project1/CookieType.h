@@ -13,12 +13,9 @@
 #define COOKIETYPE _H
 
 #include <string>
-<<<<<<< HEAD
 #include <cstddef>
 //#include //???? not <iostream> there is no need to include iostream in this file, 
 //because you are not printing anything,(ONLY the ones needed in this file)
-=======
->>>>>>> 1189b6d862990715981a4795e4ab70fb5a130930
 
 class CookieType{
     public:
