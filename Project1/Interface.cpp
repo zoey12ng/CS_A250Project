@@ -60,6 +60,9 @@ void processChoice(CookieList& cookieList){
                         cout << "\n\nChoose a cookie to view the recipe.\n";
                         cookieList.printAllCookies();  
                         cout <<"\n\nYour choice: "
+                        cin >> cookieSelection;
+                        cout << "\n\n";
+                        cookieList.printRecipe(cookieSelect);
                         
                         
                         
