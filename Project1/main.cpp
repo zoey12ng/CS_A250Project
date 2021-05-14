@@ -3,7 +3,7 @@
 
 int main(){
     //cout << "Hello World!";
-
+    int* test = nullptr;
     
     //displayMenu();
 

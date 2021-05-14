@@ -10,11 +10,11 @@
 */
 
 #include "CookieType.h"
-
+#include <cstddef>
 #include <iostream>
 using namespace std;
 
-CookieType::CookieType(string name, size_t calorieNum){ 
+CookieType::CookieType(const string& name, size_t calorieNum){ 
     cookieName = name; 
     calories = calorieNum;
 }
@@ -23,7 +23,7 @@ string CookieType::getName() const { return cookieName;}
 
 size_t CookieType::getCalories() const {return calories;}
     
-void CookieType::setName(string newName){
+void CookieType::setName(const string& newName){
     cookieName = newName;
 }
 
