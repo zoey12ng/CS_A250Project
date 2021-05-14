@@ -1,5 +1,8 @@
 #include "Interface.h"
+#include <iostream>
 #include <iomanip>
+
+using namespace std;
 
 void displayMenu(){
         for(int i = 0; i < 65; i++)
@@ -29,29 +32,33 @@ void processChoice(CookieList& cookieList){
         
         switch(choice){
             case 'a':
-                if(cookieList.isEmpty())
+                if(cookieList.isEmpty()){
                         cerr << " \n\n=> There are no recipes in the list.\n\n";
                         for(int i = 0; i < 65; i++)
                                 cout << "=";
-                        cout << "\n\nPLease contact your administrator. Good bye!"
-                else 
+                        cout << "\n\nPLease contact your administrator. Good bye!";
+                }
+                else{ 
                         for(int i = 0; i < 65; i++)
                                 cout << "-";
                         cout << endl << setw(38) << "COOKIE RECIPES" << endl; 
                         for(int i = 0; i < 65; i++)
                                 cout << "-";
                         cout << "\n\n";
-                        cookieList.printAllCookies();       
+                        cookieList.printAllCookies();      
                         cout <<"\n\nWould you like to continue (y/n)?";
                         cin >> tryAgain;
+                        }
                 break;
             case 'b':
-                if(cookieList.isEmpty())
+                if(cookieList.isEmpty()){
                         cerr << " => There are no recipes in the list.\n\n";
                         for(int i = 0; i < 65; i++)
                                 cout << "=";
-                        cout << "\n\nPLease contact your administrartor. Good bye!"
-                else
+                        cout << "\n\nPLease contact your administrartor. Good bye!";
+                        }
+                else{
+                        size_t cookieSelection;
                        for(int i = 0; i < 65; i++)
                                 cout << "-";
                         cout << endl << setw(38) << "COOKIE RECIPES" << endl; 
@@ -59,11 +66,11 @@ void processChoice(CookieList& cookieList){
                                 cout << "-";
                         cout << "\n\nChoose a cookie to view the recipe.\n";
                         cookieList.printAllCookies();  
-                        cout <<"\n\nYour choice: "
+                        cout <<"\n\nYour choice: ";
                         cin >> cookieSelection;
                         cout << "\n\n";
-                        cookieList.printRecipe(cookieSelect);
-                        
+                        cookieList.printRecipe(cookieSelection);
+                }   
                         
                         
                         
@@ -72,31 +79,37 @@ void processChoice(CookieList& cookieList){
                         
                 break;
             case 'c':
-                if(cookieList.isEmpty())
+                if(cookieList.isEmpty()){
                         cerr << " => There are no recipes in the list.\n\n";
                         for(int i = 0; i < 65; i++)
                                 cout << "=";
                         cout<<"\n\n";
-                        cout << " PLease contact your administrartor. Good bye!"
+                        cout << " PLease contact your administrartor. Good bye!";
+                        }
                 else
                         ..........
                 break;
             case 'd':
-                if(cookieList.isEmpty())
+                if(cookieList.isEmpty()){
                         cerr << " => There are no recipes in the list.\n\n";
                         for(int i = 0; i < 65; i++)
                                 cout << "=";
                         cout<<"\n\n";
-                        cout << " PLease contact your administrartor. Good bye!"
-                else
+                        cout << " PLease contact your administrartor. Good bye!";
+                        }
+                else{
+                    size_t maxOfCalo;
                     cout << "What is the maximun # of calories (100-200)? ";
                     cin >> maxOfCalo;
                     cout <<"\n\n";
                     cookieList.printLimitedCalories(maxOfCalo);
+                }
                 break;
+
             case 'e':
                 cout << endl << "Thank you for using our software. Good bye!";
                 break;
+
             default:
                 cout << endl << " => Sorry. That is not a selection.\n\n";   //use "\n\n" instead of << endl << endl
                 for(int i = 0; i < 65; i++)
