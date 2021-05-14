@@ -50,6 +50,7 @@ public:
 
 	// Print functions
 	void printAllCookies() const;
+	void printCalories(size_t cookieSelection);
 
 	// Function clearList
 	void clearList();
@@ -65,7 +66,8 @@ public:
 	~CookieList();
 	
 private:
-     // Part C 
+     // Part C
+	 	void CookieList::printAllCookies(); 
      	Node* getCookieLocation(size_t cookieSelect);
 	
 	// Helper functions for copy assignment operator

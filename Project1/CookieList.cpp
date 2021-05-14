@@ -54,27 +54,6 @@ using namespace std;
         return found;
     }
 
-// Print functions
-	void CookieList::printAllCookies() const
-	{
-	    if(first == nullptr)
-	        cerr <<"List is empty";
-	    else
-	    {
-	        for(int i = 0; i < 65; i++)   // we need to print it follow the output of partC!!
-                cout << "*";
-            cout << endl << setw(38) << "COOKIE RECIPES" << endl; 
-            for(int i = 0; i < 65; i++)
-                cout << "*";
-	        Node* currentNode = first;
-	        while( currentNode != nullptr)
-	        {
-	            cout << setw(26) << currentNode->getCookie().getName() << endl;
-	            currentNode = currentNode->getNext();
-	        }
-	    }
-	}
-	
 //Function clearList
 	void CookieList::clearList()
 	{  
@@ -89,6 +68,7 @@ using namespace std;
 	    last = nullptr;
 	    count = 0;
 	}
+
 // The Big Three
 	CookieList::CookieList(const CookieList& otherCookieList)
 	{
@@ -121,33 +101,6 @@ using namespace std;
 		}
 		return *this;
 	}
-
-	//Part C
-	void CookieList::printCookiesSelection() const
-	{
-		Node* current = first;
-		while(current != nullptr)
-		{
-			cout << current->getCookie().getName() << endl;
-			current = current->getNext();
-		}
-		
-	}
-	void CookieList::printRecipe(size_t cookieSelect)
-	{
-		//........
-	}
-
-	void CookieList::printLimitedCalories(size_t maxOfCalo)
-	{
-		Node* current = first;
-		while(current != nullptr)
-		{
-			if(current->getCookie().getCalories() <= maxOfCalo)
-				printCalories();
-				current = current->getNext();
-		}
-	}
 	
 	CookieList::~CookieList()
 	{
@@ -155,15 +108,16 @@ using namespace std;
 	}
 
 // Part C 
-Node* CookieList::getCookieLocation(size_t cookieSelect) // i dont know it correct or not :(
+Node* CookieList::getCookieLocation(size_t cookieSelect)
 {
 	Node* temp = first;
-	for( int i = 0, i < cookieSelect, i++)
+	for( int i = 1; i < cookieSelect; i++)
 	{
 		temp = temp->getNext();
 	}
 	return temp;	
 }
+
 //helper Function
 void CookieList::copyCallingObjIsEmpty(const CookieList& otherCookieList)
 {
