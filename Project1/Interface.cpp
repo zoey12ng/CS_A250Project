@@ -1,5 +1,6 @@
 #include "Interface.h"
 #include <iomanip>
+#include <iostream>
 
 void displayMenu(){
         for(int i = 0; i < 65; i++)
