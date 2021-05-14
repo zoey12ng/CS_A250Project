@@ -29,7 +29,7 @@ void Cookie::setServings(const size_t newServings) {
         numOfServings = newServings;
     }
         
-void Cookie::setIngredients(const vector<string> &newIngredients){
+void Cookie::setIngredients(const vector<string>& newIngredients){
             //ingredients = newIngredients;
         }
             
