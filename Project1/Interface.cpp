@@ -23,8 +23,8 @@ void processChoice(CookieList& cookieList){
         
     cout << "\nEnter your choice: ";
 
-    char choice; // initialize char choice and char tryAgain.
-    char tryAgain;
+    char choice = '\0'; // initialize char choice and char tryAgain.
+    char tryAgain = '\0';
    
     while(choice != 'e'){
         
