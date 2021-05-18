@@ -16,7 +16,7 @@
 
 class CookieType{
     public:
-        CookieType();
+        CookieType(): cookieName(), calories(0) {} //? is that initialize default constructor?
         CookieType(const std::string& name, size_t calorieNum);
         
         void setName(const std::string& newName);
