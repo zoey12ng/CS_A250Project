@@ -10,7 +10,7 @@
 */
 
 #ifndef COOKIE_H
-#define COOKIE _H
+#define COOKIE_H. //fixed
 
 #include "CookieType.h"
 #include <set>
