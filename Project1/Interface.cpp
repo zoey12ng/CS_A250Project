@@ -20,7 +20,6 @@ void displayMenu()
 
 void processChoice(CookieList& cookieList)
 {
-        
         cout << "\nEnter your choice: ";
 
         char choice = '\0'; 
@@ -28,114 +27,113 @@ void processChoice(CookieList& cookieList)
    
         while(choice != 'e')
         {
-        
                 cin >> choice;
         
                 switch(choice)
                 {
                         case 'a':
-                        if(cookieList.isEmpty())
-                        {
-                                cerr << " \n\n=> There are no recipes in the list.\n\n";
-                                cout << "================================================================\n\n";
-                                cout << "\n\nPLease contact your administrator. Good bye!";
-                        }
-                        else
-                        { 
-                                cout << "\n\n----------------------------------------------------------------\n";
-                                cout << "    COOKIE RECIPES\n"  
-                                << "----------------------------------------------------------------\n\n";
-                                cookieList.printAllCookies(); 
-                                cout << "\n\n================================================================";
-                                cout <<"\n\nWould you like to continue (y/n)?";
-                                cin >> tryAgain;
-                        }
-                        break;
+                                if(cookieList.isEmpty())
+                                {
+                                        cerr << " \n\n=> There are no recipes in the list.\n\n";
+                                        cout << "================================================================\n\n";
+                                        cout << "\n\nPLease contact your administrator. Good bye!";
+                                }
+                                else
+                                { 
+                                        cout << "\n\n----------------------------------------------------------------\n";
+                                        cout << "    COOKIE RECIPES\n"  
+                                        << "----------------------------------------------------------------\n\n";
+                                        cookieList.printAllCookies(); 
+                                        cout << "\n\n================================================================";
+                                        cout <<"\n\nWould you like to continue (y/n)?";
+                                        cin >> tryAgain;
+                                }
+                                break;
                         case 'b':
-                        if(cookieList.isEmpty())
-                        {
-                                cerr << " \n\n=> There are no recipes in the list.\n\n";
-                                cout << "================================================================\n\n";
-                                cout << "\n\nPLease contact your administrator. Good bye!";
-                        }
-                        else
-                        {
-                                size_t cookieSelection;
-                                cout << "\n\n----------------------------------------------------------------\n";
-                                cout << "    COOKIE RECIPES\n"  
-                                << "----------------------------------------------------------------\n\n";
-                                cout << "\n\nChoose a cookie to view the recipe.\n\n";
-                                cookieList.printAllCookies();  
-                                cout <<"\n\nYour choice: ";
-                                cin >> cookieSelection;
-                                cout << "\n\n";
-                                cookieList.printRecipe(cookieSelection);
-                                cout << "\n\n================================================================";
-                                cout <<"\n\nWould you like to continue (y/n)?";
-                                cin >> tryAgain;
-                        }
-                        break;
+                                if(cookieList.isEmpty())
+                                {
+                                        cerr << " \n\n=> There are no recipes in the list.\n\n";
+                                        cout << "================================================================\n\n";
+                                        cout << "\n\nPLease contact your administrator. Good bye!";
+                                }
+                                else
+                                {
+                                        size_t cookieSelection;
+                                        cout << "\n\n----------------------------------------------------------------\n";
+                                        cout << "    COOKIE RECIPES\n"  
+                                        << "----------------------------------------------------------------\n\n";
+                                        cout << "\n\nChoose a cookie to view the recipe.\n\n";
+                                        cookieList.printAllCookies();  
+                                        cout <<"\n\nYour choice: ";
+                                        cin >> cookieSelection;
+                                        cout << "\n\n";
+                                        cookieList.printRecipe(cookieSelection);
+                                        cout << "\n\n================================================================";
+                                        cout <<"\n\nWould you like to continue (y/n)?";
+                                        cin >> tryAgain;
+                                }
+                                break;
                         case 'c':
-                        if(cookieList.isEmpty())
-                        {
-                                cerr << " \n\n=> There are no recipes in the list.\n\n";
-                                cout << "================================================================\n\n";
-                                cout << "\n\nPLease contact your administrator. Good bye!";
-                        }
-                        else
-                        {
-                                size_t cookieSelection;
-                                cout << "\n\n----------------------------------------------------------------\n";
-                                cout << "    COOKIE RECIPES\n"  
-                                << "----------------------------------------------------------------\n\n";
-                                cout << "\n\nChoose a cookie # to view number of calories.\n\n";
-                                cookieList.printAllCookies(); 
-                                cout <<"\n\nYour choice: ";
-                                cin >> cookieSelection;
-                                cookieList.printCalories(cookieSelection);
-                                cout << "\n\n================================================================";
-                                cout <<"\n\nWould you like to continue (y/n)?";
-                                cin >> tryAgain;
-                        }
-                        break;
+                                if(cookieList.isEmpty())
+                                {
+                                        cerr << " \n\n=> There are no recipes in the list.\n\n";
+                                        cout << "================================================================\n\n";
+                                        cout << "\n\nPLease contact your administrator. Good bye!";
+                                }
+                                else
+                                {
+                                        size_t cookieSelection;
+                                        cout << "\n\n----------------------------------------------------------------\n";
+                                        cout << "    COOKIE RECIPES\n"  
+                                        << "----------------------------------------------------------------\n\n";
+                                        cout << "\n\nChoose a cookie # to view number of calories.\n\n";
+                                        cookieList.printAllCookies(); 
+                                        cout <<"\n\nYour choice: ";
+                                        cin >> cookieSelection;
+                                        cookieList.printCalories(cookieSelection);
+                                        cout << "\n\n================================================================";
+                                        cout <<"\n\nWould you like to continue (y/n)?";
+                                        cin >> tryAgain;
+                                }
+                                break;
                         case 'd':
-                        if(cookieList.isEmpty())
-                        {
-                                cerr << " \n\n=> There are no recipes in the list.\n\n";
-                                cout << "================================================================\n\n";
-                                cout << "\n\nPLease contact your administrator. Good bye!";
-                        }
-                        else
-                        {
-                                size_t maxOfCalo;
-                                cout << "\n\n----------------------------------------------------------------\n";
-                                cout << "    MAXIMUM CALORIES\n"  
-                                << "----------------------------------------------------------------\n\n";
-                                cout << "What is the maximun # of calories (100-200)? ";
-                                cin >> maxOfCalo;
-                                cout <<"\n\n";
-                                cookieList.printLimitedCalories(maxOfCalo);
-                                cout << "\n\n================================================================";
-                                cout <<"\n\nWould you like to continue (y/n)?";
-                                cin >> tryAgain;
-                        }
-                        break;
+                                if(cookieList.isEmpty())
+                                {
+                                        cerr << " \n\n=> There are no recipes in the list.\n\n";
+                                        cout << "================================================================\n\n";
+                                        cout << "\n\nPLease contact your administrator. Good bye!";
+                                }
+                                else
+                                {
+                                        size_t maxOfCalo;
+                                        cout << "\n\n----------------------------------------------------------------\n";
+                                        cout << "    MAXIMUM CALORIES\n"  
+                                        << "----------------------------------------------------------------\n\n";
+                                        cout << "What is the maximun # of calories (100-200)? ";
+                                        cin >> maxOfCalo;
+                                        cout <<"\n\n";
+                                        cookieList.printLimitedCalories(maxOfCalo);
+                                        cout << "\n\n================================================================";
+                                        cout <<"\n\nWould you like to continue (y/n)?";
+                                        cin >> tryAgain;
+                                }
+                                break;
                         case 'e':
-                        cout << endl << "Thank you for using our software. Good bye!";
-                        break;
+                                cout << endl << "Thank you for using our software. Good bye!";
+                                break;
                         default:
-                        cout << endl << " => Sorry. That is not a selection.\n\n";   
-                        cout << "================================================================\n\n";
-                        cout << "Would you like to try again (y/n)? ";
-                        cin >> tryAgain;
-                        if(tryAgain == 'n')
-                        {
-                                choice = 'e';
-                                cout << endl << "\n\nThank you for using our software. Good bye!";
-                        }
-                        else 
-                                displayMenu();
-                        break;  
+                                cout << endl << " => Sorry. That is not a selection.\n\n";   
+                                cout << "================================================================\n\n";
+                                cout << "Would you like to try again (y/n)? ";
+                                cin >> tryAgain;
+                                if(tryAgain == 'n')
+                                {
+                                        choice = 'e';
+                                        cout << endl << "\n\nThank you for using our software. Good bye!";
+                                }
+                                else 
+                                        displayMenu();
+                                break;  
               }
     }
 }
