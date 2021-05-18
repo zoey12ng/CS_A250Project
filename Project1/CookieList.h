@@ -68,7 +68,7 @@ public:
 private:
      // Part C
 	 	
-     	Node* getCookieLocation(size_t cookieSelect);
+     	Node* getCookieLocation(size_t cookieSelect) const;
 	
 	// Helper functions for copy assignment operator
 	void copyCallingObjIsEmpty(const CookieList& otherCookieList);
