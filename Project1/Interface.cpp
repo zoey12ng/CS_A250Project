@@ -58,7 +58,7 @@ void processChoice(CookieList& cookieList)
                                 }
                                 else
                                 {
-                                        size_t cookieSelection;
+                                        size_t cookieSelection = 0;
                                         cout << "\n\n----------------------------------------------------------------\n";
                                         cout << "    COOKIE RECIPES\n"  
                                         << "----------------------------------------------------------------\n\n";
@@ -82,7 +82,7 @@ void processChoice(CookieList& cookieList)
                                 }
                                 else
                                 {
-                                        size_t cookieSelection;
+                                        size_t cookieSelection = 0;
                                         cout << "\n\n----------------------------------------------------------------\n";
                                         cout << "    COOKIE RECIPES\n"  
                                         << "----------------------------------------------------------------\n\n";
@@ -105,7 +105,7 @@ void processChoice(CookieList& cookieList)
                                 }
                                 else
                                 {
-                                        size_t maxOfCalo;
+                                        size_t maxOfCalo = 0;
                                         cout << "\n\n----------------------------------------------------------------\n";
                                         cout << "    MAXIMUM CALORIES\n"  
                                         << "----------------------------------------------------------------\n\n";
