@@ -30,10 +30,8 @@ class Cookie : public CookieType{
         std::set<std::string> getIngredients() const; 
         Cookie& getCookie();
 
-        void printRecipe() const;
-
+        void printRecipe() const;     //fixed
         void printCalories() const;
-        
         void printIngredients() const;
         
         ~Cookie(){}
