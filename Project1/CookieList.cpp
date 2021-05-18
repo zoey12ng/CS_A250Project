@@ -61,6 +61,28 @@ bool CookieList::searchCookie(const std::string& aCookie) const
 	return found;
 }
 
+// Print functions
+void CookieList::printAllCookies() const
+{		
+	if(first == nullptr)
+		cerr <<"List is empty";
+	else
+	{
+	        Node* currentNode = first;
+	        while( currentNode != nullptr)
+	        {
+	            cout << setw(26) << currentNode->getCookie().getName() << endl;
+	            currentNode = currentNode->getNext();
+	        }
+	}
+}
+
+void CookieList::printCalories(size_t cookieSelection)
+{
+	Node* location = getCookieLocation(cookieSelection);
+	location->getCookie().printCalories();
+}
+
 //Function clearList
 void CookieList::clearList()
 {  
@@ -74,6 +96,36 @@ void CookieList::clearList()
 	}
 	last = nullptr;
 	count = 0;
+}
+
+//partC
+void CookieList::printCookiesSelection() const
+{
+	int count = 1;
+	Node* current = first;
+	while(current != nullptr)
+	{
+		cout << count << ": " << current->getCookie().getName() << endl;
+		count++;
+		current = current->getNext();
+	}
+}
+
+void CookieList::printRecipe(size_t cookieSelect)
+{
+	Node* location = getCookieLocation(cookieSelect);
+	location->getCookie().printRecipe();
+}
+
+void CookieList::printLimitedCalories(size_t maxOfCalo)
+{
+	Node* current = first;
+	while(current != nullptr)
+	{
+		if(current->getCookie().getCalories() <= maxOfCalo)
+		current->getCookie().printCalories();
+		current = current->getNext();
+	}
 }
 
 // The Big Three
@@ -115,7 +167,7 @@ CookieList::~CookieList()
    clearList();
 }
 
-// Part C 
+// private Part C 
 Node* CookieList::getCookieLocation(size_t cookieSelect) const
 {
 	Node* temp = first;
@@ -138,7 +190,6 @@ void CookieList::copyCallingObjIsEmpty(const CookieList& otherCookieList)
     }
 }
 
-//Function copyObjectsSameLength
 void CookieList::copyObjectsSameLength(const CookieList& otherCookieList)
 {
     Node* temp = otherCookieList.first;
@@ -194,55 +245,3 @@ void CookieList::copyCallingObjShorter(const CookieList& otherCookieList)
 		count++;
 	}
 }
-
-void CookieList::printAllCookies() const
-{		
-	if(first == nullptr)
-		cerr <<"List is empty";
-	else
-	{
-	        Node* currentNode = first;
-	        while( currentNode != nullptr)
-	        {
-	            cout << setw(26) << currentNode->getCookie().getName() << endl;
-	            currentNode = currentNode->getNext();
-	        }
-	}
-}
-
-void CookieList::printCookiesSelection() const
-{
-	int count = 1;
-	Node* current = first;
-	while(current != nullptr)
-	{
-		cout << count << ": " << current->getCookie().getName() << endl;
-		count++;
-		current = current->getNext();
-	}
-}
-
-void CookieList::printRecipe(size_t cookieSelect)
-{
-	Node* location = getCookieLocation(cookieSelect);
-	location->getCookie().printRecipe();
-}
-
-void CookieList::printLimitedCalories(size_t maxOfCalo)
-{
-	Node* current = first;
-	while(current != nullptr)
-	{
-		if(current->getCookie().getCalories() <= maxOfCalo)
-		current->getCookie().printCalories();
-		current = current->getNext();
-	}
-}
-
-void CookieList::printCalories(size_t cookieSelection)
-{
-	Node* location = getCookieLocation(cookieSelection);
-	location->getCookie().printCalories();
-}
-
-
