@@ -14,27 +14,13 @@
 
 #include "Cookie.h"
 
-class Node
-{
-public:
-	Node() : cookie(), next(nullptr) {}
-	Node(const Cookie& newCookie, Node* newNext)
-		: cookie(newCookie), next(newNext) {}
-	Cookie& getCookie() { return cookie; } 
-	Node* getNext() const { return next; }
-	void setCookie(const Cookie& newCookie) { cookie = newCookie; }
-	void setNext(Node* newNext) { next = newNext; }
-	~Node() {}
-private:
-	Cookie cookie;
-	Node* next;
-};
+#include <list>
 
 class CookieList
 {
 public:
 	// Constructors
-	CookieList() : first(nullptr), last(nullptr), count(0){};
+	CookieList();
 	
 	// Function addCookie
 	void addCookie(const Cookie& aCookie);
@@ -46,7 +32,6 @@ public:
 
 	// Boolean functions
 	bool isEmpty() const;
-	bool searchCookie(const std::string& aCookie) const;
 
 	// Print functions
 	void printAllCookies() const;
@@ -66,19 +51,7 @@ public:
 	~CookieList();
 	
 private:
-     // Part C
-	 	
-     	Node* getCookieLocation(size_t cookieSelect) const;
-	
-	// Helper functions for copy assignment operator
-	void copyCallingObjIsEmpty(const CookieList& otherCookieList);
-	void copyObjectsSameLength(const CookieList& otherCookieList);
-	void copyCallingObjLonger(const CookieList& otherCookieList);
-	void copyCallingObjShorter(const CookieList& otherCookieList);
-
-	Node* first;
-	Node* last;
-	size_t count;
+	std::list<Cookie>* cookieList;
 };
 
 #endif
