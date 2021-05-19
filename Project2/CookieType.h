@@ -13,25 +13,23 @@
 #define COOKIETYPE _H
 
 #include <string>
-//#include //???? not <iostream> there is no need to include iostream in this file, 
-//because you are not printing anything,(ONLY the ones needed in this file)
 
 class CookieType{
-    public:
-        CookieType();
-        CookieType(const std::string& name, size_t calorieNum);
-        
-        void setName(const std::string& newName);
-        void setCalories(const size_t newCalories);
-        
-        std::string getName() const;
-        size_t getCalories() const;
-        
-        ~CookieType(){}
-        
-    private:
-        std::string cookieName;
-        size_t calories;
+public:
+    CookieType(): calories(0) {} 
+    CookieType(const std::string& name, size_t calorieNum);
+    
+    void setName(const std::string& newName);
+    void setCalories(const size_t newCalories);
+    
+    std::string getName() const;
+    size_t getCalories() const;
+    
+    ~CookieType(){}
+    
+private:
+    std::string cookieName;
+    size_t calories;
 };
 
 #endif
