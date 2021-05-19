@@ -57,7 +57,7 @@ void CookieList::printAllCookies() const
 		cout << setw(26) << &i.getName() << endl;
 }
 
-void CookieList::printCalories(size_t cookieSelection)
+void CookieList::printCalories(size_t cookieSelection) ////
 {
 	Node* location = getCookieLocation(cookieSelection);
 	location->getCookie().printCalories();
@@ -73,15 +73,15 @@ void CookieList::clearList()
 void CookieList::printCookiesSelection() const
 {
 	int count = 1;
-	for(auto i : *cookieList){
+	for(auto i : *cookieList)
+	{
 		cout << count++ << ": " << i.getName() << endl;
 	}
 }
 
-void CookieList::printRecipe(size_t cookieSelect)
+void CookieList::printRecipe(size_t cookieSelect). //////
 {
-	Node* location = getCookieLocation(cookieSelect);
-	location->getCookie().printRecipe();
+	
 }
 
 void CookieList::printLimitedCalories(size_t maxOfCalo)
@@ -96,7 +96,7 @@ void CookieList::printLimitedCalories(size_t maxOfCalo)
 // Copy Constructor
 CookieList::CookieList(const CookieList& otherCookieList)
 {
-	list<Cookie>* cookieList = new list<Cookie>(otherCookieList); //not yet
+	list<Cookie>* cookieList = new list<Cookie>(otherCookieList); 
 
 }
 
