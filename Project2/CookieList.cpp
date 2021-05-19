@@ -18,7 +18,8 @@
 using namespace std;
 
 // default CookieList constructor
-CookieList::CookieList(){
+CookieList::CookieList()
+{
 	cookieList = new list<Cookie>();
 }
 
@@ -92,20 +93,14 @@ void CookieList::printLimitedCalories(size_t maxOfCalo)
 	}
 }
 
-// The Big Three
+// Copy Constructor
 CookieList::CookieList(const CookieList& otherCookieList)
 {
-	count = otherCookieList.count;
-	first = otherCookieList.first;
-	last = otherCookieList.last;
-	while(first != nullptr)
-	{
-		addCookie(first->getCookie());
-            	first = first->getNext();
-		count++; 
-	}
+	list<Cookie>* cookieList = new list<Cookie>(otherCookieList);
+
 }
 
+//Copy assignment operator:
 CookieList& CookieList::operator=(const CookieList& otherCookieList)	
 {
 	if(&otherCookieList == this) //check if 2 obj are the same
@@ -114,14 +109,7 @@ CookieList& CookieList::operator=(const CookieList& otherCookieList)
 	}
 	else
 	{
-		if( count == 0) 
-			copyCallingObjIsEmpty(otherCookieList);
-		else if (count == otherCookieList.count) 
-			copyObjectsSameLength(otherCookieList);
-		else if(count > otherCookieList.count) 
-			copyCallingObjLonger(otherCookieList);
-		else if(count < otherCookieList.count)
-			copyCallingObjShorter(otherCookieList);
+		 *cookieList = *otherCookieList.cookieList;
 	}
 	return *this;
 }
@@ -131,3 +119,5 @@ CookieList::~CookieList()
    clearList();
    delete cookieList;
 }
+
+
