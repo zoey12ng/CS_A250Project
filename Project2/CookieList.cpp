@@ -58,8 +58,9 @@ void CookieList::printAllCookies() const
 
 void CookieList::printCalories(size_t cookieSelection) ////
 {
-	Node* location = getCookieLocation(cookieSelection);
-	location->getCookie().printCalories();
+	
+	
+	
 }
 
 //Function clearList
@@ -81,6 +82,8 @@ void CookieList::printCookiesSelection() const
 void CookieList::printRecipe(size_t cookieSelect). //////
 {
 	Node * location = 
+		
+		
 }
 
 void CookieList::printLimitedCalories(size_t maxOfCalo)
