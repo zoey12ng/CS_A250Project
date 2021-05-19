@@ -23,7 +23,6 @@ CookieList::CookieList()
 	cookieList = new list<Cookie>();
 }
 
-
 // Function addCookie
 void CookieList::addCookie(const Cookie& aCookie)
 {
@@ -81,7 +80,7 @@ void CookieList::printCookiesSelection() const
 
 void CookieList::printRecipe(size_t cookieSelect). //////
 {
-	
+	Node * location = 
 }
 
 void CookieList::printLimitedCalories(size_t maxOfCalo)
@@ -97,7 +96,6 @@ void CookieList::printLimitedCalories(size_t maxOfCalo)
 CookieList::CookieList(const CookieList& otherCookieList)
 {
 	list<Cookie>* cookieList = new list<Cookie>(otherCookieList); 
-
 }
 
 //Copy assignment operator:
