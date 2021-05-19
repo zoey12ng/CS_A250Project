@@ -22,7 +22,8 @@ void CookieList::addCookie(const Cookie& aCookie)
 {
 	if( count == 0)
 	{
-		//add a new node to the list
+		first = new Node(aCookie, nullptr);
+		first = last;
 	}
 	else
 	{
