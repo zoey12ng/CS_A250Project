@@ -121,4 +121,3 @@ CookieList::~CookieList()
    delete cookieList;
 }
 
-
