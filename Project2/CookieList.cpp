@@ -6,7 +6,7 @@
     Date (month in letters)
 
     CS A250
-    Project 1
+    Project 2
 */
 
 #include "CookieList.h"
@@ -96,7 +96,7 @@ void CookieList::printLimitedCalories(size_t maxOfCalo)
 // Copy Constructor
 CookieList::CookieList(const CookieList& otherCookieList)
 {
-	list<Cookie>* cookieList = new list<Cookie>(otherCookieList);
+	list<Cookie>* cookieList = new list<Cookie>(otherCookieList); //not yet
 
 }
 
