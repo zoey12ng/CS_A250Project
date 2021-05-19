@@ -24,10 +24,10 @@ public:
     
             
     void setServings(const size_t newServings);
-    void setIngredients(const std::vector<std::string> &newIngredient   
+    void setIngredients(const std::vector<std::string> &newIngredients);   
     size_t getServings() const;
     std::set<std::string> getIngredients() const; 
-    Cookie& getCo   
+    Cookie& getCookie();   
     void printRecipe() const;     //fixed
     void printCalories() const;
     void printIngredients() const;
