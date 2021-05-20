@@ -91,9 +91,9 @@ void CookieList::printRecipe(size_t cookieSelect)
 	iter->printRecipe();	
 }
 
-void CookieList::printLimitedCalories(size_t maxOfCalo)
+void CookieList::printLimitedCalories(size_t maxOfCalo) const
 {
-	for(auto i : *cookieList)
+	for(const auto& i : *cookieList)
 	{
 		if(i.getCalories() <= maxOfCalo)
 			i.printCalories();
