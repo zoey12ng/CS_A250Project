@@ -61,8 +61,8 @@ void CookieList::printCalories(size_t cookieSelection) //
 	Cookie* currentCookie;
 	for(int i = 0; i < cookieSelection; i++)
 	{
-  	currentCookie = iter*;
-  	iter++;
+  		currentCookie = iter*;
+  		iter++;
 	}
 	iter->printCalories();
 }
@@ -88,8 +88,8 @@ void CookieList::printRecipe(size_t cookieSelect)
 	Cookie* currentCookie;
 	for(int i = 0; i < cookieSelection; i++)
 	{
-  	currentCookie = iter*;
-  	iter++;
+  		currentCookie = iter*;
+  		iter++;
 	}
 	iter->printRecipe();	
 }
@@ -127,4 +127,3 @@ CookieList::~CookieList()
    clearList();
    delete cookieList;
 }
-
