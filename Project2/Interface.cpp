@@ -1,3 +1,21 @@
+/*
+        Group No Idea
+        
+        Alvarez, Mauricio (41298)
+        Nguyen, Thu (41298)
+        
+        Date (month in letters)
+        
+        CS A250
+        Project 2
+*/
+/*
+1. The name of selection is "Sort the cookie list"
+2. It sort the cookie list    
+3. 
+4.
+*/
+
 #include "Interface.h"
 #include <iomanip>
 #include <iostream>
