@@ -27,7 +27,7 @@ public:
     void setIngredients(const std::vector<std::string> &newIngredients);   
     size_t getServings() const;
     std::set<std::string> getIngredients() const; 
-    Cookie& getCookie();   
+    const Cookie& getCookie() const;   //fixed
     void printRecipe() const;     //fixed
     void printCalories() const;
     void printIngredients() const;
