@@ -56,11 +56,16 @@ void CookieList::printAllCookies() const
 		cout << setw(26) << &i.getName() << endl;
 }
 
-void CookieList::printCalories(size_t cookieSelection) ////
+void CookieList::printCalories(size_t cookieSelection) //
 {
-	
-	
-	
+	auto iter = cookieList.begin();
+	Cookie* currentCookie;
+	for(int i = 0; i < cookieSelection; i++)
+	{
+  	currentCookie = iter*;
+  	iter++;
+	}
+	iter->printCalories();
 }
 
 //Function clearList
@@ -81,9 +86,14 @@ void CookieList::printCookiesSelection() const
 
 void CookieList::printRecipe(size_t cookieSelect). //////
 {
-	Node * location = 
-		
-		
+	auto iter = cookieList.begin();
+	Cookie* currentCookie;
+	for(int i = 0; i < cookieSelection; i++)
+	{
+  	currentCookie = iter*;
+  	iter++;
+	}
+	iter->printRecipe();	
 }
 
 void CookieList::printLimitedCalories(size_t maxOfCalo)
