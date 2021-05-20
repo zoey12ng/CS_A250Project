@@ -106,7 +106,7 @@ void CookieList::printLimitedCalories(size_t maxOfCalo)
 // Copy Constructor
 CookieList::CookieList(const CookieList& otherCookieList)
 {
-	list<Cookie>* cookieList = new list<Cookie>(otherCookieList); 
+	cookieList = new list<Cookie>(*otherCookieList.cookieList); 
 }
 
 CookieList& CookieList::operator=(const CookieList& otherCookieList)	
