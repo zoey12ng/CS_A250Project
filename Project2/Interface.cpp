@@ -15,7 +15,8 @@ void displayMenu()
         cout << setw(26) << "b. Print cookie recipe" << endl;
         cout << setw(28) << "c. Print cookie calories" << endl;
         cout << setw(29) << "d. Print limited calories" << endl;
-        cout << setw(14) << "e. To exit" << endl;
+        cout << setw(27) << "e. Sort the cookie list" << endl;
+        cout << setw(14) << "f. To exit" << endl;
 }
 
 void processChoice(CookieList& cookieList)
