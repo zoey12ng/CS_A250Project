@@ -55,13 +55,11 @@ void CookieList::printAllCookies() const
 		cout << setw(26) << &i.getCookie().getName() << endl; // fixed
 }
 
-void CookieList::printCalories(size_t cookieSelection) //
+void CookieList::printCalories(size_t cookieSelection) //fixed
 {
 	auto iter = cookieList->begin();
-	Cookie* currentCookie;
-	for(int i = 0; i < cookieSelection; i++)
+	for(size_t i = 0; i < cookieSelection - 1; i++)
 	{
-  		currentCookie = iter*;
   		iter++;
 	}
 	iter->printCalories();
@@ -73,22 +71,21 @@ void CookieList::clearList()
 	cookieList->clear();
 }
 
-void CookieList::printCookiesSelection() const
+void CookieList::printCookiesSelection() const //////////// hoi laij cai &i
 {
 	int count = 1;
-	for(auto i : *cookieList)
+	for(const auto& i : *cookieList)
 	{
-		cout << count++ << ": " << i.getName() << endl;
+		cout << count << ": " << i.getCookie()getName() << endl;
+		count++;
 	}
 }
 
 void CookieList::printRecipe(size_t cookieSelect)
 {
-	auto iter = cookieList->begin(); // access STL list using pointer cookieList ->
-	Cookie* currentCookie;
-	for(int i = 0; i < cookieSelection; i++)
+	auto iter = cookieList->begin(); 
+	for(size_t i = 0; i < cookieSelection - 1; i++)
 	{
-  		currentCookie = iter*;
   		iter++;
 	}
 	iter->printRecipe();	
