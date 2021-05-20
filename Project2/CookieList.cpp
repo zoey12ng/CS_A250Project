@@ -51,13 +51,13 @@ bool CookieList::isEmpty() const
 // Print functions
 void CookieList::printAllCookies() const
 {		
-	for(const auto i : *cookieList)
-		cout << setw(26) << &i.getName() << endl;
+	for(const auto& i : *cookieList)
+		cout << setw(26) << &i.getCookie().getName() << endl; // fixed
 }
 
 void CookieList::printCalories(size_t cookieSelection) //
 {
-	auto iter = cookieList.begin();
+	auto iter = cookieList->begin();
 	Cookie* currentCookie;
 	for(int i = 0; i < cookieSelection; i++)
 	{
@@ -84,7 +84,7 @@ void CookieList::printCookiesSelection() const
 
 void CookieList::printRecipe(size_t cookieSelect)
 {
-	auto iter = cookieList.begin();
+	auto iter = cookieList->begin(); // access STL list using pointer cookieList ->
 	Cookie* currentCookie;
 	for(int i = 0; i < cookieSelection; i++)
 	{
