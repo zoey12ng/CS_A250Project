@@ -25,7 +25,7 @@ void processChoice(CookieList& cookieList)
         char choice = '\0'; 
         char tryAgain = '\0';
    
-        while(choice != 'e')
+        while(choice != 'f')
         {
                 cin >> choice;
         
@@ -119,6 +119,9 @@ void processChoice(CookieList& cookieList)
                                 }
                                 break;
                         case 'e':
+                                cookieList.sort();
+                              
+                        case 'f':
                                 cout << endl << "Thank you for using our software. Good bye!";
                                 break;
                         default:
