@@ -121,6 +121,6 @@ CookieList& CookieList::operator=(const CookieList& otherCookieList)
 	
 CookieList::~CookieList()
 {
-   clearList();
+   //clearList();
    delete cookieList;
 }
