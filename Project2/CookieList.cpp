@@ -23,7 +23,6 @@ CookieList::CookieList()
 	cookieList = new list<Cookie>();
 }
 
-// Function addCookie
 void CookieList::addCookie(const Cookie& aCookie)
 {
 	cookieList->push_back(aCookie);
@@ -74,7 +73,6 @@ void CookieList::clearList()
 	cookieList->clear();
 }
 
-//partC
 void CookieList::printCookiesSelection() const
 {
 	int count = 1;
@@ -84,7 +82,7 @@ void CookieList::printCookiesSelection() const
 	}
 }
 
-void CookieList::printRecipe(size_t cookieSelect). //////
+void CookieList::printRecipe(size_t cookieSelect)
 {
 	auto iter = cookieList.begin();
 	Cookie* currentCookie;
@@ -111,10 +109,9 @@ CookieList::CookieList(const CookieList& otherCookieList)
 	list<Cookie>* cookieList = new list<Cookie>(otherCookieList); 
 }
 
-//Copy assignment operator:
 CookieList& CookieList::operator=(const CookieList& otherCookieList)	
 {
-	if(&otherCookieList == this) //check if 2 obj are the same
+	if(&otherCookieList == this) 
 	{
 		cerr << "Attempted assignment to itself.";
 	}
