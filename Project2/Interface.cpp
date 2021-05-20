@@ -12,8 +12,8 @@
 /*
 1. The name of selection is "Sort the cookie list"
 2. It sort the cookie list    
-3. 
-4.
+3. Sort by alphabet
+4. 
 */
 
 #include "Interface.h"
@@ -138,7 +138,7 @@ void processChoice(CookieList& cookieList)
                                 }
                                 break;
                         case 'e':
-                                cout << "Let sort the list !" << endl;
+                                cout << "List sorted !" << endl;
                                 cookieList.sort();
                                 cookieList.printAllCookies();
                               
