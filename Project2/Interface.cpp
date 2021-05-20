@@ -120,6 +120,7 @@ void processChoice(CookieList& cookieList)
                                 }
                                 break;
                         case 'e':
+                                cout << "Let sort the list !" << endl;
                                 cookieList.sort();
                               
                         case 'f':
