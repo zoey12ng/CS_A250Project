@@ -43,26 +43,26 @@ set<string> Cookie::getIngredients() const
     return ingredients;
 }
 
-Cookie& Cookie::getCookie() 
+const Cookie& Cookie::getCookie() const
 {
     return *this;
 }
 
 void Cookie::printRecipe() const 
 {
-    cout << "Recipe for " << getName();
-    cout << "\nServings: " << numOfServings;
+    cout << "    " << "Recipe for " << getName() << endl;
+    cout << "        " << "Servings: " << numOfServings << endl;
     printIngredients();
 }
 
 void Cookie::printCalories() const
 {
-    cout << getName() << "(calories: " << getCalories() << ")\n";
+    cout << endl << "    " << getName() << " (calories: " << getCalories() << ")";
 }
 
 void Cookie::printIngredients() const
 {
-    cout << "Ingredients: ";
+    cout << "    " << "Ingredients: ";
     for(auto i : ingredients)
         cout << i << " ";
 }
