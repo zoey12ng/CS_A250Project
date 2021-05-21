@@ -63,7 +63,7 @@ void processChoice(CookieList& cookieList)
                                         cout << "    COOKIE RECIPES\n"  
                                         << "----------------------------------------------------------------\n\n";
                                         cout << "\n\nChoose a cookie to view the recipe.\n\n";
-                                        cookieList.printAllCookies();  
+                                        cookieList.printCookiesSelection();  
                                         cout <<"\n\nYour choice: ";
                                         cin >> cookieSelection;
                                         cout << "\n\n";
@@ -87,7 +87,7 @@ void processChoice(CookieList& cookieList)
                                         cout << "    COOKIE RECIPES\n"  
                                         << "----------------------------------------------------------------\n\n";
                                         cout << "\n\nChoose a cookie # to view number of calories.\n\n";
-                                        cookieList.printAllCookies(); 
+                                        cookieList.printCookiesSelection(); 
                                         cout <<"\n\nYour choice: ";
                                         cin >> cookieSelection;
                                         cookieList.printCalories(cookieSelection);
