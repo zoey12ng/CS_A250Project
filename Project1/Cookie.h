@@ -21,14 +21,13 @@ public:
     Cookie() : numOfServings(0) {}  
     Cookie(const std::string &name, size_t calorieNum, const std::set<std::string> &ingredients, 
                 size_t numOfServings);
-    
-            
+         
     void setServings(const size_t newServings);
     void setIngredients(const std::vector<std::string> &newIngredients);   
     size_t getServings() const;
     std::set<std::string> getIngredients() const; 
     const Cookie& getCookie() const;   
-    void printRecipe() const;     //fixed
+    void printRecipe() const;    
     void printCalories() const;
     void printIngredients() const;
     
